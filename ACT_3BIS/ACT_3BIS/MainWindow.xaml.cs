@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -76,6 +77,73 @@ namespace ACT_3BIS
                 }
             }
             
+        }
+        
+
+        private void previewDA(object sender, TextCompositionEventArgs e)
+        {
+            if(estEntier(e.Text) || e.Text == "/")
+            {
+                e.Handled = false;
+            }
+            else if(e.Text == "," || !estEntier(e.Text) || e.Text == "-")
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void previewDS(object sender, TextCompositionEventArgs e)
+        {
+            if (estEntier(e.Text) || e.Text == "/")
+            {
+                e.Handled = false;
+            }
+            else if (e.Text == "," || !estEntier(e.Text) || e.Text == "-")
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void clickCalcDuree(object sender, RoutedEventArgs e)
+        {
+            DateTime da;
+            DateTime ds;
+
+            if(DateTime.TryParse(txtDa.Text, out da) && DateTime.TryParse(txtDs.Text, out ds))
+            {
+                int daMois = da.Month;
+                int daJours = da.Day;
+                int daAnnee = da.Year;
+                int dsMois = ds.Month;
+                int dsJours = ds.Day;
+                int dsAnnee = ds.Year;
+
+               
+
+                if(daMois == 7 && dsMois == 7 || daMois == 8 && dsMois == 8 || daMois == 7 && dsMois == 8 || daMois == 12 && dsMois == 12  || daMois == 1 && dsMois == 1 || daMois == 12 && dsMois == 1 || daMois == 4 && dsMois == 4 && dsAnnee == daAnnee || daAnnee == dsAnnee -1)
+                {
+                    TimeSpan nbrJours;
+                    nbrJours = ds - da;
+                    int nbrSemaines = (int)(nbrJours.TotalDays / 7);
+                    if(nbrJours.TotalDays % 7 != 0)
+                    {
+                        nbrSemaines += 1;
+                    }
+                    tbNbrSemaine1.Text = nbrSemaines.ToString();
+                    tbNbrSemaineAffiche.Text = nbrSemaines.ToString();
+                    MessageBox.Show(" Calcule du nombre de semaines effectué ! ");
+                }
+                else
+                {
+                    MessageBox.Show("Les dates sont incorrects !");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Les dates entrées ne sont pas dans autorisé pour la reservation.");
+            }
         }
     }
 }

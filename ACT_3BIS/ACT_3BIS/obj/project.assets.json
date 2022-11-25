@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Doria\\Desktop\\Cours\\Programmation\\Programmation_6TI\\WPF\\ACT_3BIS\\ACT_3BIS\\ACT_3BIS.csproj",
+      "projectUniqueName": "C:\\Users\\Doria\\Desktop\\Cours\\Programmation\\Programmation_6TI\\WPF\\ACT3BIS\\ACT_3BIS\\ACT_3BIS\\ACT_3BIS.csproj",
       "projectName": "ACT_3BIS",
-      "projectPath": "C:\\Users\\Doria\\Desktop\\Cours\\Programmation\\Programmation_6TI\\WPF\\ACT_3BIS\\ACT_3BIS\\ACT_3BIS.csproj",
+      "projectPath": "C:\\Users\\Doria\\Desktop\\Cours\\Programmation\\Programmation_6TI\\WPF\\ACT3BIS\\ACT_3BIS\\ACT_3BIS\\ACT_3BIS.csproj",
       "packagesPath": "C:\\Users\\Doria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Doria\\Desktop\\Cours\\Programmation\\Programmation_6TI\\WPF\\ACT_3BIS\\ACT_3BIS\\obj\\",
+      "outputPath": "C:\\Users\\Doria\\Desktop\\Cours\\Programmation\\Programmation_6TI\\WPF\\ACT3BIS\\ACT_3BIS\\ACT_3BIS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
